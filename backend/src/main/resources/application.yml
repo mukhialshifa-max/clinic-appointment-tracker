@@ -1,0 +1,22 @@
+# Default settings: in-memory H2 database, sample data loaded.
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:h2:mem:clinic;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+
+app:
+  security:
+    # Demo passwords only. Override with environment variables
+    # APP_SECURITY_STAFF_PASSWORD / APP_SECURITY_ADMIN_PASSWORD.
+    staff-password: staff123
+    admin-password: admin123

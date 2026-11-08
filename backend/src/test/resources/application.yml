@@ -1,0 +1,14 @@
+# Test settings: no demo data, fresh in-memory database.
+spring:
+  profiles:
+    active: test
+  datasource:
+    url: jdbc:h2:mem:clinic-test;DB_CLOSE_DELAY=-1
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+app:
+  security:
+    staff-password: test-staff
+    admin-password: test-admin
